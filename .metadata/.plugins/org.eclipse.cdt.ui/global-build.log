@@ -1,0 +1,38 @@
+23:00:20 **** Incremental Build of configuration Debug for project Sop_Watch ****
+make all 
+Building file: ../src/Int_init.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"src/Int_init.d" -MT"src/Int_init.o" -c -o "src/Int_init.o" "../src/Int_init.c"
+Finished building: ../src/Int_init.c
+ 
+Building file: ../src/main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../src/main.c
+ 
+Building target: Sop_Watch.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Sop_Watch.map -mmcu=atmega16 -o "Sop_Watch.elf"  ./src/Int_init.o ./src/main.o   
+Finished building target: Sop_Watch.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Sop_Watch.elf  >"Sop_Watch.lss"
+Finished building: Sop_Watch.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Sop_Watch.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    4270 bytes (26.1% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (1.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

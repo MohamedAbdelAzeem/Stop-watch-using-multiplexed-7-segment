@@ -1,0 +1,59 @@
+/*
+ * Timer1.c
+ *
+ *  Created on: Oct 13, 2020
+ *      Author: ZAMALA
+ *      problem:
+ *      generate 25% duty cycle using compare mode
+ *      F_cpu = 8MHz
+ *      prescaler= 8
+ */
+#include <util/delay.h>
+#include <avr/io.h>
+#include <avr/interrupt.h>
+
+
+
+unsigned char count = 0 ;
+
+void TIMER1_init(void)
+{
+	SREG = (1<<7);
+	TIMSK = (1<< OCIE1A);
+	//F_cpu = 8
+	TCCR1A = (1<<COM1A0)|(1 << FOC1A) ;
+	TCCR1B = (1<<CS11)|(1<<WGM12) ; //CLK/8
+	OCR1A = 1000;
+	PORTD |= (1<<PD5);
+}
+
+
+//ISR(TIMER1_COMPA_vect)
+//{
+//	if(OCR1A == 125)
+//	{
+//		OCR1A = 375;
+//	}
+//	else
+//	{
+//		OCR1A = 125;
+//	}
+//
+//}
+
+
+int main(void)
+{
+	DDRD |= (1 << PD4) | (1<<PD5);
+
+
+
+	TIMER1_init();
+
+	while(1)
+	{
+
+	}
+
+	return 0;
+}

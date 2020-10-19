@@ -1,0 +1,20 @@
+19:12:06 **** Incremental Build of configuration Debug for project Timer1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Timer1.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:     228 bytes (1.4% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+19:12:06 Build Finished. 0 errors, 0 warnings. (took 159ms)
+

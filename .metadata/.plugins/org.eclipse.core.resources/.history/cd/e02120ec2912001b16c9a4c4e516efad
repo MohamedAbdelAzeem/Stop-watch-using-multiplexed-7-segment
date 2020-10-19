@@ -1,0 +1,18 @@
+/*
+ * Ex_Int.h
+ *
+ *  Created on: Oct 19, 2020
+ *      Author: ZAMALA
+ */
+
+#ifndef EX_INT_H_
+#define EX_INT_H_
+
+
+
+void INT0_init(void);
+void INT1_init(void);
+void INT2_init(void);
+
+
+#endif /* EX_INT_H_ */
