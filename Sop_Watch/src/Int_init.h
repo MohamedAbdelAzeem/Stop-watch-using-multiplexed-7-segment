@@ -2,16 +2,14 @@
  * Ex_Int.h
  *
  *  Created on: Oct 19, 2020
- *      Author: ZAMALA
+ *      Author: Mohamed AbdelAzeem
  */
 
-#define SECOND 1000
+
 
 #ifndef INT_INIT_H_
 #define INT_INIT_H_
-
-
-
+// functions prototype
 void INT0_init(void);
 void INT1_init(void);
 void INT2_init(void);
