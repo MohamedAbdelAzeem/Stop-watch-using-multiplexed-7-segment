@@ -1,4 +1,5 @@
-# STOPWATCH USING 6 DIGITS MULTIPLEXED 7 SEGMENTS
+# STOPWATCH USING 6 DIGITS 7 SEGMENTS  MULTIPLEXING
+
 ## Required :
 F_CPU = 1 MHZ.
 Use Timer1 CTC Mode to count the time for the stop watch.
